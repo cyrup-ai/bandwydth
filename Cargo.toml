@@ -45,8 +45,8 @@ serde = { version = "1.0.219", features = ["derive"] }
 tokio-util = "0.7"
 color-eyre = "0.6"
 # Direct QUIC dependencies for ProgressHub client
-cryypt_quic = { path = "../cryypt/packages/quic" }
-cryypt = { version = "0.1.0", path = "../cryypt/packages/cryypt", features = ["key", "quic", "aes", "sha256", "zstd", "pqcrypto", "vault"] }
+cryypt_quic = { git = "https://github.com/cyrup-ai/cryypt", branch = "main", package = "cryypt_quic" }
+cryypt = { git = "https://github.com/cyrup-ai/cryypt", branch = "main", features = ["key", "quic", "aes", "sha256", "zstd", "pqcrypto", "vault"] }
 # hickory-resolver already specified above
 
 
