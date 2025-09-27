@@ -1,0 +1,24 @@
+[package]
+name = "bandwydth_client"
+version = "0.1.0"
+edition = "2021"
+
+[dependencies]
+# Workspace dependencies
+tokio = { version = "1.46.1", features = ["full"] }
+tracing = "0.1.41"
+serde = "1.0.219"
+bincode = { version = "2.0.1", features = ["derive"] }
+async-stream = "0.3.6"
+futures-core = "0.3.31"
+futures-util = "0.3.31"
+
+# QUIC transport
+cryypt_quic = { path = "../../cryypt/quic" }
+cryypt = { version = "0.1.0", path = "../../cryypt/cryypt", features = ["key", "quic"] }
+
+# Protocol from server
+bandwydth_server = { path = "../bandwydth_server" }
+
+[dev-dependencies]
+tracing-subscriber = "0.3"

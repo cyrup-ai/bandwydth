@@ -1,0 +1,220 @@
+[package]
+name = "opportunistic_event_ticker"
+version = "0.1.0"
+edition = "2024"
+publish = false
+
+[lib]
+path = "src/lib.rs"
+
+[dependencies]
+ratatui = "0.30.0-alpha.5"
+crossterm = { version = "0.29", features = ["event-stream", "serde"] }
+tokio = { version = "1.45.1", features = ["rt-multi-thread", "macros", "fs", "time", "signal", "sync"] }
+futures = "0.3"
+futures-core = "0.3"
+futures-util = "0.3"
+tokio-stream = "0.1"
+async-stream = "0.3"
+crossbeam-channel = "0.5"
+crossbeam-queue = "0.3"
+crossbeam = "0.8"
+color-eyre = "0.6.5"
+octocrab = "0.44.1"
+futures-timer = "3.0.3"
+pin-project-lite = "0.2"
+serde = { version = "1.0", features = ["derive"] }
+strum = { version = "0.26", features = ["derive"] }
+signal-hook = "0.3"
+unicode-width = "0.2.0"
+
+# No build dependencies needed
+
+[features]
+default = ["dots", "line", "arc", "bouncing_bar", "circle_quarters", "toggle"]
+
+# Individual spinner features
+aesthetic = []
+arc = []
+arrow = []
+arrow2 = []
+arrow3 = []
+balloon = []
+balloon2 = []
+beta_wave = []
+binary = []
+blue_pulse = []
+bounce = []
+bouncing_ball = []
+bouncing_bar = []
+box_bounce = []
+box_bounce2 = []
+christmas = []
+circle = []
+circle_halves = []
+circle_quarters = []
+clock = []
+dots = []
+dots10 = []
+dots11 = []
+dots12 = []
+dots13 = []
+dots14 = []
+dots2 = []
+dots3 = []
+dots4 = []
+dots5 = []
+dots6 = []
+dots7 = []
+dots8 = []
+dots8_bit = []
+dots9 = []
+dots_circle = []
+dqpb = []
+dwarf_fortress = []
+earth = []
+finger_dance = []
+fist_bump = []
+flip = []
+grenade = []
+grow_horizontal = []
+grow_vertical = []
+hamburger = []
+hearts = []
+layer = []
+line = []
+line2 = []
+material = []
+mindblown = []
+monkey = []
+moon = []
+noise = []
+orange_blue_pulse = []
+orange_pulse = []
+pipe = []
+point = []
+pong = []
+runner = []
+sand = []
+shark = []
+simple_dots = []
+simple_dots_scrolling = []
+smiley = []
+soccer_header = []
+speaker = []
+square_corners = []
+squish = []
+star = []
+star2 = []
+time_travel = []
+toggle = []
+toggle10 = []
+toggle11 = []
+toggle12 = []
+toggle13 = []
+toggle2 = []
+toggle3 = []
+toggle4 = []
+toggle5 = []
+toggle6 = []
+toggle7 = []
+toggle8 = []
+toggle9 = []
+triangle = []
+weather = []
+
+# Convenience feature groups
+all = [
+    "aesthetic",
+    "arc",
+    "arrow",
+    "arrow2",
+    "arrow3",
+    "balloon",
+    "balloon2",
+    "beta_wave",
+    "binary",
+    "blue_pulse",
+    "bounce",
+    "bouncing_ball",
+    "bouncing_bar",
+    "box_bounce",
+    "box_bounce2",
+    "christmas",
+    "circle",
+    "circle_halves",
+    "circle_quarters",
+    "clock",
+    "dots",
+    "dots10",
+    "dots11",
+    "dots12",
+    "dots13",
+    "dots14",
+    "dots2",
+    "dots3",
+    "dots4",
+    "dots5",
+    "dots6",
+    "dots7",
+    "dots8",
+    "dots8_bit",
+    "dots9",
+    "dots_circle",
+    "dqpb",
+    "dwarf_fortress",
+    "earth",
+    "finger_dance",
+    "fist_bump",
+    "flip",
+    "grenade",
+    "grow_horizontal",
+    "grow_vertical",
+    "hamburger",
+    "hearts",
+    "layer",
+    "line",
+    "line2",
+    "material",
+    "mindblown",
+    "monkey",
+    "moon",
+    "noise",
+    "orange_blue_pulse",
+    "orange_pulse",
+    "pipe",
+    "point",
+    "pong",
+    "runner",
+    "sand",
+    "shark",
+    "simple_dots",
+    "simple_dots_scrolling",
+    "smiley",
+    "soccer_header",
+    "speaker",
+    "square_corners",
+    "squish",
+    "star",
+    "star2",
+    "time_travel",
+    "toggle",
+    "toggle10",
+    "toggle11",
+    "toggle12",
+    "toggle13",
+    "toggle2",
+    "toggle3",
+    "toggle4",
+    "toggle5",
+    "toggle6",
+    "toggle7",
+    "toggle8",
+    "toggle9",
+    "triangle",
+    "weather",
+]
+
+# Common spinner sets
+dots_all = ["dots", "dots10", "dots11", "dots12", "dots13", "dots14", "dots2", "dots3", "dots4", "dots5", "dots6", "dots7", "dots8", "dots8_bit", "dots9", "dots_circle"]
+toggle_all = ["toggle", "toggle10", "toggle11", "toggle12", "toggle13", "toggle2", "toggle3", "toggle4", "toggle5", "toggle6", "toggle7", "toggle8", "toggle9"]
